@@ -1,0 +1,9 @@
+{
+    "name" : "Impacta Sales Tec",
+    "autoload": {
+        "psr-4": {
+            "Impacta\\" : "src/"
+        },
+        "files": ["lib/funcoes.php"]
+    }
+}

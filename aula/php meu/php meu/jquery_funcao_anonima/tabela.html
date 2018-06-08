@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Parent</title>
+</head>
+<body>
+    <table id="tabela" border="1">
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>1</td>
+            <td>Ricardo</td>
+            <td>11 9999-9999</td>
+            <td>aluno</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>2</td>
+            <td>Leonardo</td>
+            <td>11 5555-5555</td>
+            <td>professor</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>3</td>
+            <td>Giovanna</td>
+            <td>11 3333-3333</td>
+            <td>aluna</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>4</td>
+            <td>Caio</td>
+            <td>11 2222-2222</td>
+            <td>aluno</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>5</td>
+            <td>Leo VBA</td>
+            <td>11 6666-6666</td>
+            <td>professor</td>
+        </tr>
+    </table>
+
+    <button id="excluir">Excluir</button>
+
+    <h1>Excluidos</h1>
+
+    <table id="excluido" border="1">
+
+    </table>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $('#excluir').click(function () {
+            var linha = $('#tabela input:checked').parent().parent();
+
+            $('#excluido').append(linha);
+
+            // $('#excluido').append('<tr><td>teste</td></tr>');
+        });
+    </script>
+</body>
+</html>

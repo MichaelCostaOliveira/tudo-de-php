@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fogo em jquery!</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body style="background-color: black">
+    <div id="mudacor">
+        Mudar a cor da fonta para azul<br>
+        e mudar o fundo para verde
+    </div>
+
+    <button id="mudar">Aplicar efeitos</button>
+
+    <div>
+        <img src="fogo.gif" id="fogo" width="100" alt="">
+    </div>
+    <button id="tacar_fogo">Tacar Fogo</button>
+    <button id="aparecer_texto">APARECER TEXTO</button>
+<div id="texto">aaaaaaaaaatextoaaaaaaa</div>
+<script>
+    // jQuery
+
+    $('#mudar').click(function () {
+        $('#mudacor').css('background-color', 'blue')
+                     .css('color', 'green')
+                     .text('Alteramos as cores!');
+    });
+
+    $('#fogo').hide();
+    $('#texto').hide();
+    // Background mudar para preto pode usar style em body
+
+    // Ao clicar em tacar fogo fazer o fogo aparecer
+
+
+
+$('#aparecer_texto').click(function(){
+    $('#texto').show();
+    $('#texto').css("color","blue");
+});
+
+
+    var apagado = true;
+
+    $('#tacar_fogo').click(function () {
+
+        // Callback da chamada toggle
+        // a função será chamada após o termindo da animação
+        // $('#fogo').toggle(1000, function () {
+        //     $('body').css('background-color', 'white');
+        // });
+
+        $('#fogo').slideToggle(1000, function () {
+            setTimeout(function () {
+                $('#fogo').slideToggle();
+            }, 5000);
+        });
+
+        // if (apagado == true) {
+        //     $('#fogo').show();
+        //     $('#tacar_fogo').text('Apagar Fogo');
+        //     apagado = !apagado;
+        // } else {
+        //     $('#fogo').hide();
+        //     $('#tacar_fogo').text('Tacar Fogo');
+        //     apagado = !apagado;
+        // }
+    });
+    </script>
+</body>
+</html>

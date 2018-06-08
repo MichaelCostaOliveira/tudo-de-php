@@ -1,0 +1,12 @@
+{
+	"name" : "MeuProjeto",
+	"require": {
+		"respect/validation": "0.6.1",
+		"php-activerecord/php-activerecord": "1.1.2"
+	},
+	"autoload" : {
+		"psr-4": {
+			"MeuProjeto\\" : "src/"
+		}
+	}
+}
